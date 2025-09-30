@@ -1,0 +1,19 @@
+{
+  "name": "stress-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "node load-test.js",
+    "test:artillery": "artillery run artillery-config.yml",
+    "test:1000": "node load-test.js 1000",
+    "test:5000": "node load-test.js 5000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "artillery": "^2.0.21",
+    "axios": "^1.12.2"
+  }
+}
