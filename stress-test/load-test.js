@@ -102,8 +102,8 @@ class LoadTester {
   }
 
   async runLoadTest() {
-    console.log(`🚀 Starting load test with ${this.concurrency} concurrent requests...`);
-    console.log(`📡 Target: ${this.baseURL}`);
+    console.log(`Starting load test with ${this.concurrency} concurrent requests...`);
+    console.log(`Target: ${this.baseURL}`);
 
 
     const endpoints = [
@@ -118,7 +118,7 @@ class LoadTester {
       this.results.startTime = performance.now();
       await this.runConcurrentRequests(endpoints);
     } catch (error) {
-      console.error('❌ Load test failed:', error.message);
+      console.error('Load test failed:', error.message);
     }
 
     this.results.endTime = performance.now();
@@ -130,13 +130,13 @@ class LoadTester {
   }
 
   printResults(stats) {
-    console.log('\n📊 LOAD TEST RESULTS');
+    console.log('\n LOAD TEST RESULTS');
     console.log(`Total Requests: ${stats.totalRequests}`);
     console.log(`Successful Requests: ${stats.successfulRequests}`);
     console.log(`Failed Requests: ${stats.failedRequests}`);
     console.log(`Success Rate: ${stats.successRate}%`);
     console.log(`Requests/Second: ${stats.requestsPerSecond}`);
-    console.log('\n⏱️  RESPONSE TIME STATISTICS');
+    console.log('\n RESPONSE TIME STATISTICS');
     console.log(`Average: ${stats.averageResponseTime}ms`);
     console.log(`Min: ${stats.minResponseTime}ms`);
     console.log(`Max: ${stats.maxResponseTime}ms`);
@@ -146,17 +146,17 @@ class LoadTester {
     console.log(`99th percentile: ${stats.p99ResponseTime}ms`);
 
     // Performance criteria
-    console.log('\n🎯 PERFORMANCE CRITERIA');
+    console.log('\nPERFORMANCE CRITERIA');
     const avgResponseTime = parseFloat(stats.averageResponseTime);
     const p95ResponseTime = parseFloat(stats.p95ResponseTime);
     const successRate = parseFloat(stats.successRate);
 
-    console.log(`✅ Average Response Time: ${avgResponseTime < 200 ? 'PASS' : 'FAIL'} (${avgResponseTime}ms < 200ms)`);
-    console.log(`✅ 95th Percentile: ${p95ResponseTime < 500 ? 'PASS' : 'FAIL'} (${p95ResponseTime}ms < 500ms)`);
-    console.log(`✅ Success Rate: ${successRate > 99 ? 'PASS' : 'FAIL'} (${successRate}% > 99%)`);
+    console.log(`Average Response Time: ${avgResponseTime < 200 ? 'PASS' : 'FAIL'} (${avgResponseTime}ms < 200ms)`);
+    console.log(`95th Percentile: ${p95ResponseTime < 500 ? 'PASS' : 'FAIL'} (${p95ResponseTime}ms < 500ms)`);
+    console.log(`Success Rate: ${successRate > 99 ? 'PASS' : 'FAIL'} (${successRate}% > 99%)`);
 
     if (this.results.errors.length > 0) {
-      console.log('\n❌ ERRORS');
+      console.log('\n ERRORS');
       const errorSummary = {};
       this.results.errors.forEach(error => {
         const key = `${error.endpoint} - ${error.status || 'Network Error'}`;

@@ -13,7 +13,7 @@ export const connectRedis = async (): Promise<void> => {
     });
 
     redis.on('connect', () => {
-      console.log('✅ Redis connected successfully');
+      console.log('Redis connected successfully');
     });
 
     redis.on('error', (err) => {

@@ -2,7 +2,7 @@
 
 A comprehensive, scalable e-commerce landing page for eco-friendly water bottles built with Next.js, Node.js, and optimized for high-traffic scenarios.
 
-## 🚀 Features
+## Features
 
 ### Frontend (Next.js)
 - **Responsive Design**: Mobile-first approach with Tailwind CSS
@@ -31,14 +31,14 @@ A comprehensive, scalable e-commerce landing page for eco-friendly water bottles
 - **Monitoring**: Prometheus and Grafana for system metrics
 - **Performance Testing**: Artillery and custom load testing scripts
 
-## 📋 Prerequisites
+## Prerequisites
 
 - Node.js 18+ 
 - Docker and Docker Compose
 - MongoDB (or use Docker)
 - Redis (or use Docker)
 
-## 🛠️ Installation & Setup
+## Installation & Setup
 
 ### 1. Clone the Repository
 ```bash
@@ -97,7 +97,7 @@ cd backend
 npm run seed
 ```
 
-## 🚀 Running the Application
+## Running the Application
 
 ### Development Mode
 
@@ -132,7 +132,7 @@ docker-compose logs -f
 docker-compose down
 ```
 
-## 🌐 Access Points
+## Access Points
 
 - **Frontend**: http://localhost:3000
 - **Backend API**: http://localhost:5000
@@ -140,7 +140,7 @@ docker-compose down
 - **Monitoring Dashboard**: http://localhost:3001 (Grafana)
 - **Metrics**: http://localhost:9090 (Prometheus)
 
-## 🧪 Testing & Performance
+## Testing & Performance
 
 ### Load Testing
 
@@ -168,7 +168,7 @@ Test different headline variants:
 - Variant A: http://localhost:3000?variant=A
 - Variant B: http://localhost:3000?variant=B
 
-## 📊 Performance Metrics
+## Performance Metrics
 
 The application is designed to handle:
 - **1000+ concurrent users**
@@ -182,7 +182,7 @@ The application is designed to handle:
 - ✅ Success Rate: >99%
 - ✅ Zero errors under normal load
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
@@ -206,7 +206,7 @@ The application is designed to handle:
                        └─────────────────┘    └─────────────────┘
 ```
 
-## 🔧 API Endpoints
+## API Endpoints
 
 ### Authentication
 - `POST /api/auth/register` - User registration
@@ -226,7 +226,7 @@ The application is designed to handle:
 ### Health
 - `GET /health` - Health check endpoint
 
-## 🚀 Deployment
+## Deployment
 
 ### Local Deployment
 ```bash
@@ -264,7 +264,7 @@ docker-compose logs -f
 2. Get connection details
 3. Update Redis config in environment
 
-## 📈 Scaling for 100k+ Users
+## Scaling for 100k+ Users
 
 ### Infrastructure Recommendations
 
@@ -312,7 +312,7 @@ docker-compose logs -f
    - Image optimization
    - Bundle optimization
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -346,26 +346,3 @@ docker-compose down
 docker volume rm eco-bottle_mongodb_data
 docker-compose up -d
 ```
-
-## 📝 License
-
-This project is licensed under the MIT License.
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
-## 📞 Support
-
-For support and questions:
-- Email: support@ecobottle.com
-- Documentation: [Project Wiki]
-- Issues: [GitHub Issues]
-
----
-
-**Built with ❤️ for a sustainable future**
